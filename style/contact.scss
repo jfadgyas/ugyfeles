@@ -1,0 +1,105 @@
+
+.contact{  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem;
+    color: aliceblue;
+    background: url('./img/contact_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position-x: center;
+    border-radius: 3em;
+    &__wrapper{
+        // border: 1px solid greenyellow;
+        flex-basis: 50%;
+        flex: 0;
+    }
+    &__title{
+        text-transform: uppercase;
+    }
+    &__form{
+        // border: 1px solid salmon;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 0.60rem;
+    }
+    &__input-wrapper{
+        position: relative;
+    }
+    &__input{
+        width: 100%;
+        padding: 1rem;
+        color: aliceblue;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+        border: none;
+        border-radius: 2em;
+        outline: none;
+        font-size: 1rem;
+        transition: 300ms;
+        &::placeholder{
+            text-transform: capitalize;
+        }
+        &:focus{
+            background: rgba(0, 0, 0, 0.7);
+        }
+        &:not(:placeholder-shown){
+            &:valid{
+                // color: springgreen;
+                & ~ .contact__icon--valid{
+                    display: block;
+                }
+            }
+            &:invalid{
+                // color: tomato;
+                & ~ .contact__icon--invalid{
+                    display: block;
+                }
+            }
+        }
+        &--text{
+            height: 10rem;
+            min-height: 3rem;
+        }
+    }
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        width: 3rem;
+        height: 3rem;
+        background:rgba(0, 0, 0, 0.5);
+        border: none;
+        border-radius: 50%;
+        &:hover{
+            cursor: pointer;
+            outline: 2px solid #50759F;;
+            outline-offset: 4px;
+            .contact__icon{
+                fill: #50759F;;
+            }
+        }
+    }
+    &__icon{
+        width: 3rem;
+        fill: aliceblue;
+        &--valid,
+        &--invalid{
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &--valid{
+            fill: springgreen;
+        }
+        &--invalid{
+            fill: tomato;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+body {
+  position: relative;
+  margin: 0;
+  background: linear-gradient(#243B55, #141E30);
+  font-family: system-ui;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  width: 10%;
+  aspect-ratio: 1/1;
+}
+
+.landing {
+  height: 100vh;
+  padding: 2em;
+  background-image: url("./img/bm.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  color: aliceblue;
+  font-family: "Teko", sans-serif;
+}
+.landing__title {
+  width: 50%;
+  font-size: 72px;
+  text-transform: uppercase;
+}
+.landing__motto {
+  width: 50%;
+  font-size: 38px;
+  line-height: 0.85em;
+}
+.landing__btn {
+  padding: 0.25em 0.75em;
+  background: transparent;
+  color: aliceblue;
+  border: 1px solid aliceblue;
+  border-radius: 0.2em;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  box-shadow: 0px 20px 50px aliceblue;
+  font-family: "Teko", sans-serif;
+  font-size: 32px;
+  transition: 300ms;
+}
+.landing__btn:hover {
+  background: rgba(175, 218, 247, 0.5);
+  box-shadow: 2px 2px 2px aliceblue;
+  rotate: -2deg;
+  cursor: pointer;
+}
+
+.info {
+  border: 1px solid red;
+  position: absolute;
+  top: 15em;
+  right: 0;
+  width: 25%;
+  height: 20em;
+  padding: 1rem;
+  background: linear-gradient(62deg, rgba(142, 197, 252, 0.5) 0%, rgba(224, 195, 252, 0.5) 100%);
+  color: aliceblue;
+  border: 1px solid aliceblue;
+  border-radius: 0.5em;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  isolation: isolate;
+}
+.info__title {
+  text-transform: uppercase;
+}/*# sourceMappingURL=landing.css.map */

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+body {
+    position: relative;
+    margin: 0;
+    // background: linear-gradient(#0f0c29, #302b63, #24243e);
+    // background: linear-gradient(#12c2e9, #c471ed, #f64f59);
+    // background: linear-gradient(#000428, #004e92);
+    // background: linear-gradient(#292E49, #536976);
+    // background: linear-gradient(#2980b9, #2c3e50);
+    background: linear-gradient(#243B55, #141E30);
+    font-family: system-ui; //?
+    // font-size: 1.125rem;
+    // line-height: 1.6;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.logo{
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 1 / 1;
+}
+
+// Landing
+.landing{
+    height: 100vh;
+    padding: 2em;
+    background-image: url('./img/bm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    color: aliceblue;
+    font-family: 'Teko', sans-serif;
+    &__title{
+        width: 50%;
+        font-size: 72px;
+        text-transform: uppercase;
+    }
+    &__motto{
+        width: 50%;
+        font-size: 38px;
+        line-height: 0.85em;
+    }
+    &__btn{
+        padding: 0.25em 0.75em;
+        background: transparent;
+        color: aliceblue;
+        border: 1px solid aliceblue;
+        border-radius: 0.2em;
+        backdrop-filter: blur(8px);
+        box-shadow: 0px 20px 50px aliceblue;
+        font-family: 'Teko', sans-serif;
+        font-size: 32px;
+        transition: 300ms;
+        &:hover{
+            background: rgba(175, 218, 247, 0.5);
+            box-shadow: 2px 2px 2px aliceblue;
+            rotate: -2deg;
+            cursor: pointer;
+        }
+    }
+}
+
+.info{
+    border: 1px solid red;
+    // position: sticky;
+    position: absolute;
+    top: 15em;
+    right: 0;
+    width: 25%;
+    height: 20em;
+    padding: 1rem;
+    // background: transparent;
+    background: linear-gradient(62deg, rgba(142, 197, 252, 0.5) 0%, rgba(224, 195, 252, 0.5) 100%);
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 0.5em;
+    backdrop-filter: blur(8px);
+    // box-shadow: 0px 20px 50px aliceblue;
+    isolation: isolate;
+    &__title{
+        text-transform: uppercase;
+    }
+}

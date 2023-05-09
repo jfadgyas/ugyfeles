@@ -1,0 +1,72 @@
+.hero {
+  padding: 1em;
+  -moz-columns: 2;
+       columns: 2;
+  color: #50759F;
+  background-image: url("./img/expert_bg.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  text-align: center;
+}
+.hero__title {
+  margin-bottom: 0;
+  font-size: 48px;
+  text-transform: capitalize;
+}
+.hero__description {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.person {
+  margin-bottom: 10em;
+  padding: 1em;
+  border: 1px solid aliceblue;
+  border-radius: 0.45em;
+  -webkit-backdrop-filter: blur(18px);
+          backdrop-filter: blur(18px);
+  box-shadow: 5px 5px 20px rgb(65, 76, 85);
+  text-align: left;
+  -moz-columns: 2;
+       columns: 2;
+}
+.person__foto {
+  width: 10em;
+  height: 10em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+.person:first-of-type .person__foto {
+  background-image: url("./img/fej1.jpg");
+}
+.person:nth-of-type(2) .person__foto {
+  background-image: url("./img/fej2.jpg");
+}
+.person__name {
+  font-size: 32px;
+}
+.person__name, .person__position {
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.person__position {
+  margin-bottom: 1em;
+}
+.person__details {
+  display: flex;
+}
+.person__icon {
+  width: 1.5em;
+  fill: #50759F;
+  flex-shrink: 0;
+}
+.person__description {
+  opacity: 0.7;
+}
+
+a {
+  word-break: break-all;
+}/*# sourceMappingURL=hero.css.map */

@@ -1,0 +1,73 @@
+.hero{
+    padding: 1em;
+    columns: 2;
+    color: #50759F;
+    background-image: url('./img/expert_bg.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    text-align: center;
+    &__title{
+        margin-bottom: 0;
+        font-size: 48px;
+        text-transform: capitalize;
+    }
+    &__description{
+        margin-top: 0;
+        font-size: 1.2em;
+    }
+}
+.person{
+    margin-bottom: 10em;
+    padding: 1em;
+    border: 1px solid aliceblue;
+    border-radius: 0.45em;
+    backdrop-filter: blur(18px);
+    box-shadow: 5px 5px 20px rgb(65, 76, 85);
+    text-align: left;
+    columns: 2;
+    &__foto{
+        width: 10em;
+        height: 10em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+    }
+    &:first-of-type &__foto{
+        background-image: url('./img/fej1.jpg');
+    }
+    &:nth-of-type(2) &__foto{
+        background-image: url('./img/fej2.jpg');
+    }
+    &__name{
+        // line-height: 1.2em; //?
+        font-size: 32px;
+    }
+    &__name, &__position{
+        margin: 0;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+    }
+    &__position{
+        margin-bottom: 1em;
+    }
+    &__details{
+        display: flex;
+    }
+    &__icon{
+        width: 1.5em;
+        // margin-right: 1em;
+        fill: #50759F;
+        // border: 1px solid salmon;
+        flex-shrink: 0;
+    }
+    &__description{
+        opacity: 0.7;
+    }
+}
+
+
+// ???
+a{
+    word-break: break-all;
+}
