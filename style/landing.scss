@@ -31,7 +31,7 @@ body {
 
 .logo{
     position: absolute;
-    width: 10%;
+    width: 5em;
     aspect-ratio: 1 / 1;
 }
 
@@ -51,7 +51,8 @@ body {
         width: 50%;
         margin-top: 0;
         line-height: 1em; //?
-        font-size: clamp(3em, 1em + 5vw, 7em);
+        // font-size: clamp(3em, 1em + 5vw, 7em);
+        font-size: clamp(2em, 7vw, 7em);
         text-transform: uppercase;
     }
     &__motto,

@@ -20,9 +20,9 @@
         overflow: hidden;
         transition: 300ms;
         
-        &:hover,
-        &:focus,
-        &:active,
+        // &:hover,
+        // &:focus,
+        // &:active,
         &.open{
             width: calc((4rem * 5) - 1rem);
             background: rgba(0, 0, 0, 0.5);

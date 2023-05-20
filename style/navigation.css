@@ -20,7 +20,7 @@
   overflow: hidden;
   transition: 300ms;
 }
-.navigation__list:hover, .navigation__list:focus, .navigation__list:active, .navigation__list.open {
+.navigation__list.open {
   width: 19rem;
   background: rgba(0, 0, 0, 0.5);
 }
