@@ -80,7 +80,7 @@
 }
 .person__details {
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
 }
 .person__link {
   color: inherit;

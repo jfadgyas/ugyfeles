@@ -50,7 +50,8 @@ body {
     &__title{
         width: 50%;
         margin-top: 0;
-        font-size: clamp(3.0em, 1em + 5vw, 7em);
+        line-height: 1em; //?
+        font-size: clamp(3em, 1em + 5vw, 7em);
         text-transform: uppercase;
     }
     &__motto,

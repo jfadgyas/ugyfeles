@@ -28,13 +28,13 @@
         &:first-child{ 
             --_icon-color: var(--icon-green);           
             &::after{
-                background: url('./img/1.avif');
+                background: url('./img/1.webp');
             }
         }
         &:nth-child(2){
             --_icon-color: var(--icon-red); 
             &::after{
-                background: url('./img/2.avif');
+                background: url('./img/2.webp');
             }
         }
         &:nth-child(3){

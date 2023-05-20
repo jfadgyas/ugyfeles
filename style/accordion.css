@@ -28,13 +28,13 @@
   --_icon-color: var(--icon-green);
 }
 .accordion__item:first-child::after {
-  background: url("./img/1.avif");
+  background: url("./img/1.webp");
 }
 .accordion__item:nth-child(2) {
   --_icon-color: var(--icon-red);
 }
 .accordion__item:nth-child(2)::after {
-  background: url("./img/2.avif");
+  background: url("./img/2.webp");
 }
 .accordion__item:nth-child(3) {
   --_icon-color: var(--icon-blue);
