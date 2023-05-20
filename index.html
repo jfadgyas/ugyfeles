@@ -28,21 +28,21 @@
                         </svg>
                     </li>
                     <li class="navigation__list-item">
-                        <a href="#">
+                        <a href="#contact-us">
                             <svg class='navigation__icon' viewBox="-3.5 -3 30 30">
                                 <use xlink:href="#contact"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="navigation__list-item">
-                        <a href="#">
+                        <a href="#services">
                             <svg class='navigation__icon' viewBox="-3.5 -3 30 30">
                                 <use xlink:href="#tooltip-text"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="navigation__list-item">
-                        <a href="#">
+                        <a href="#about">
                             <svg class='navigation__icon' viewBox="-3.5 -3 30 30">
                                 <use xlink:href="#account"></use>
                             </svg>
@@ -76,7 +76,7 @@
             </article>
 
             <!-- Hero -->
-            <article class="hero">
+            <article id='about' class="hero">
                 <h1 class='hero__title'>Learn from our experts!</h1>
                 <p class='hero__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac eros nulla. Donec tincidunt mauris.</p>
                 <div class='person'>
@@ -122,7 +122,7 @@
             </article>
 
             <!-- Accordion -->
-            <section class="accordion">
+            <section id='services' class="accordion">
                 <ul class='accordion__container'>
                     <li id='item1' class='accordion__item expanded'>
                         <h2 id='item1-heading' class='accordion__heading'>
@@ -212,14 +212,20 @@
             </figure> -->
 
             <!-- Contact -->
-            <section class="contact">
+            <section id='contact-us' class="contact">
                 <div class="contact__wrapper">
                     <h2 class="contact__title">Uzenetkuldes</h2>
                     <p class="contact__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit reiciendis, nesciunt natus voluptatum perspiciatis iste obcaecati optio consectetur ex veniam itaque laudantium quibusdam. Tenetur commodi animi eos minus iure similique!</p>
                 </div>
-                <form class="contact__form">
+                <form id='message' class="contact__form">
                     <label for="name" class="contact__label">
-                        <input id='name' class="contact__input" type="text" placeholder="név"/>
+                        <input
+                            id='name'
+                            class="contact__input"
+                            type="text"
+                            placeholder="név"
+                            required
+                        />
                         <svg class='contact__icon contact__icon--valid' viewBox="0 -3 30 30">
                             <use xlink:href="#check"></use>
                         </svg>
@@ -228,7 +234,13 @@
                         </svg>                        
                     </label>
                     <label for="email" class="contact__label">
-                        <input id='email' class="contact__input" type="email" placeholder="email"/>
+                        <input
+                            id='email'
+                            class="contact__input"
+                            type="email"
+                            placeholder="email"
+                            required
+                        />
                         <svg class='contact__icon contact__icon--valid' viewBox="0 -3 30 30">
                             <use xlink:href="#check"></use>
                         </svg>
@@ -237,7 +249,13 @@
                         </svg>                        
                     </label>
                     <label for="tel" class="contact__label">
-                        <input id='tel' class="contact__input" type="tel" placeholder="tel"/>
+                        <input
+                            id='tel'
+                            class="contact__input"
+                            type="tel"
+                            placeholder="tel"
+                            required
+                        />
                         <svg class='contact__icon contact__icon--valid' viewBox="0 -3 30 30">
                             <use xlink:href="#check"></use>
                         </svg>
@@ -246,9 +264,14 @@
                         </svg>                        
                     </label>
                     <label for="message" class="contact__label">
-                        <textarea id='message' class="contact__input contact__input--text" placeholder="üzenet"></textarea>
+                        <textarea
+                            id='message'
+                            class="contact__input contact__input--text"
+                            placeholder="üzenet"
+                            required>
+                        </textarea>
                     </label>
-                    <button class='contact__btn' type="submit">
+                    <button id='sendmessage' class='contact__btn' type="submit">
                         <svg class='contact__icon' viewBox="-9 -18 120 120">
                             <use xlink:href="#send"></use>
                         </svg>

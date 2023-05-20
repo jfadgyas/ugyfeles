@@ -22,3 +22,15 @@ accordion.addEventListener('click', e => {
 
 // TODO:
 // add keyboard support, up down arrows
+
+// Handle form
+const send = document.querySelector('#sendmessage')
+
+send.addEventListener('click', e => sendMessage(e))
+
+const sendMessage = e => {
+    e.preventDefault()
+    if (!document.forms.message.checkValidity()) return document.forms.message.reportValidity()
+    // maybe custom validity message for every field?
+    console.log('email will be sent')
+}
