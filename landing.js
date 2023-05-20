@@ -1,3 +1,15 @@
+// Handle menu
+const menu = document.querySelector('#menu')
+const open = document.querySelector('#open')
+const close = document.querySelector('#close')
+
+menu.addEventListener('click', e => {
+    menu.classList.toggle('open')
+    open.classList.toggle('hidden')
+    close.classList.toggle('hidden')
+})
+
+// Handle accordion
 const accordion = document.querySelector('.accordion__container')
 
 accordion.addEventListener('click', e => {

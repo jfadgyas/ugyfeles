@@ -3,10 +3,8 @@
     position: fixed;
     right: 0;
     display: flex;
-    // justify-content: flex-end;
     height: 3rem;
     margin: 0;
-    color: aliceblue;
     z-index: 9999;
     &__list{
         list-style: none;
@@ -14,48 +12,39 @@
         flex-direction: row-reverse;
         align-items: center;
         gap: 1rem;
-        width: 3em;
+        width: 3rem;
         margin: 0;
         padding: 0;
         border-radius: 10rem;
         overflow: hidden;
         transition: 300ms;
+        
         &:hover,
         &:focus,
-        &:active{
-            width: auto; // doesn't transition
+        &:active,
+        &.open{
             width: calc((4rem * 5) - 1rem);
             background: rgba(0, 0, 0, 0.5);
-            .navigation__list-item:first-child{
-                display: none;
-            }
         }
     }
     &__list-item{
         margin: 0;
         padding: 0;
-        transition: 300ms;
-        // &:last-child{
-        //     background: springgreen;
-        // }
-        // &:nth-child(4){
-        //     transform: translateX(8rem);
-        // }
-        // &:nth-child(3){
-        //     transform: translateX(12rem);
-        // }
-        // &:nth-child(2){
-        //     transform: translateX(16rem);
-        // }
-        // &:nth-child(1){
-        //     transform: translateX(20rem);
-        // }
+        &.hidden{
+            display: none;
+        }
     }
     &__icon{
         width: 3rem;
         aspect-ratio: 1 / 1;
         background: rgba(0, 0, 0, 0.5);
-        fill: aliceblue;
+        fill: var(--primary-color);
         border-radius: 50%;
+        &--close{
+            transform: rotateZ(45deg);
+        }
+        &:hover{
+            fill: var(--accent-color);
+        }
     }
 }

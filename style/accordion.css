@@ -1,19 +1,19 @@
 .accordion {
   font-family: system-ui;
   contain: content;
-  margin: 2rem auto;
+  padding: 2rem 0;
+  background: linear-gradient(#243B55, #141E30);
 }
 .accordion__container {
   --_button-size: 3rem;
   --_padding: 1rem;
-  color: aliceblue;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  width: 500px;
-  height: 500px;
-  margin: 0;
+  width: 370px;
+  height: 35em;
+  margin: 0 auto;
   padding: 0.3em;
 }
 .accordion__item {
@@ -24,23 +24,23 @@
   overflow: hidden;
   transition: 300ms;
 }
+.accordion__item:first-child {
+  --_icon-color: var(--icon-green);
+}
 .accordion__item:first-child::after {
   background: url("./img/1.avif");
 }
-.accordion__item:first-child .accordion__icon {
-  fill: springgreen;
+.accordion__item:nth-child(2) {
+  --_icon-color: var(--icon-red);
 }
 .accordion__item:nth-child(2)::after {
   background: url("./img/2.avif");
 }
-.accordion__item:nth-child(2) .accordion__icon {
-  fill: tomato;
+.accordion__item:nth-child(3) {
+  --_icon-color: var(--icon-blue);
 }
 .accordion__item:nth-child(3)::after {
   background: url("./img/3.jpg");
-}
-.accordion__item:nth-child(3) .accordion__icon {
-  fill: lightskyblue;
 }
 .accordion__item:nth-child(1)::after, .accordion__item:nth-child(2)::after, .accordion__item:nth-child(3)::after {
   background-repeat: no-repeat;
@@ -84,7 +84,7 @@
   cursor: pointer;
 }
 .accordion__item:focus-within {
-  outline: 2px solid red;
+  outline: 2px solid var(--_icon-color);
   outline-offset: 2px;
 }
 .accordion__heading {
@@ -99,7 +99,7 @@
   background: none;
   border: none;
   outline: none;
-  color: aliceblue;
+  color: var(--primary-color);
   font-family: system-ui;
   text-transform: uppercase;
 }
@@ -107,6 +107,7 @@
   width: var(--_button-size);
   aspect-ratio: 1/1;
   background: rgba(0, 0, 0, 0.5);
+  fill: var(--_icon-color);
   border-radius: 50%;
   z-index: 10;
 }
@@ -129,5 +130,6 @@
 @media (min-width: 640px) {
   .accordion__container {
     flex-direction: row;
+    width: 500px;
   }
 }/*# sourceMappingURL=accordion.css.map */

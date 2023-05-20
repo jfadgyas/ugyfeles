@@ -3,19 +3,19 @@
     font-family: system-ui;
     contain: content;
     // height: 40em;
-    margin: 2rem auto;
+    padding: 2rem 0;
+    background: linear-gradient(#243B55, #141E30);
     &__container{
         --_button-size: 3rem;
         --_padding: 1rem;
 
-        color: aliceblue;
         list-style: none;
         display: flex;
         flex-direction: column;
         gap: 1em;
-        width: 500px;
-        height: 500px;
-        margin: 0;
+        width: 370px;
+        height: 35em;
+        margin: 0 auto;
         padding: 0.3em;
     }
     &__item{
@@ -25,28 +25,22 @@
         border-radius: calc((2 * (var(--_padding)) + var(--_button-size)) / 2);
         overflow: hidden;
         transition: 300ms;
-        &:first-child{            
+        &:first-child{ 
+            --_icon-color: var(--icon-green);           
             &::after{
                 background: url('./img/1.avif');
             }
-            & .accordion__icon{
-                fill: springgreen;
-            }
         }
         &:nth-child(2){
+            --_icon-color: var(--icon-red); 
             &::after{
                 background: url('./img/2.avif');
             }
-            & .accordion__icon{
-                fill: tomato;
-            }
         }
         &:nth-child(3){
+            --_icon-color: var(--icon-blue); 
             &::after{
                 background: url('./img/3.jpg');
-            }
-            & .accordion__icon{
-                fill: lightskyblue;
             }
         }
         &:nth-child(1)::after,
@@ -93,7 +87,7 @@
             cursor: pointer;
         }
         &:focus-within{
-            outline: 2px solid red; // --_icon-color
+            outline: 2px solid var(--_icon-color);
             outline-offset: 2px;
         }
     }
@@ -109,7 +103,7 @@
         background: none;
         border: none;
         outline: none;
-        color: aliceblue;
+        color: var(--primary-color);
         font-family: system-ui;
         text-transform: uppercase;
     }
@@ -117,6 +111,7 @@
         width: var(--_button-size);
         aspect-ratio: 1 / 1;
         background: rgba(0, 0, 0, 0.5);
+        fill: var(--_icon-color);
         border-radius: 50%;
         z-index: 10;
     }
@@ -140,5 +135,6 @@
 @media (min-width: 640px){
     .accordion__container{
         flex-direction: row;
+        width: 500px;
     }
 }

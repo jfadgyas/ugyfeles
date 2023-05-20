@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 
+:root{
+    // Colors
+    --primary-color: aliceblue;
+    --secondary-color: #50759F;
+    --accent-color: #2084e2;
+
+    // Icon colors
+    --icon-green: springgreen;
+    --icon-red: tomato;
+    --icon-blue: lightskyblue;
+}
+
 body {
     position: relative;
     margin: 0;
@@ -9,9 +21,8 @@ body {
     // background: linear-gradient(#292E49, #536976);
     // background: linear-gradient(#2980b9, #2c3e50);
     background: linear-gradient(#243B55, #141E30);
-    font-family: system-ui; //?
-    // font-size: 1.125rem;
-    // line-height: 1.6;
+    color: var(--primary-color);
+    font-family: system-ui;
 }
 
 *{
@@ -26,38 +37,49 @@ body {
 
 // Landing
 .landing{
-    height: 100vh;
+    display: grid;
+    place-content: center;
+    
+    min-height: 100vh;
     padding: 2em;
     background-image: url('./img/bm.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
-    color: aliceblue;
     font-family: 'Teko', sans-serif;
     &__title{
         width: 50%;
-        font-size: 72px;
+        margin-top: 0;
+        font-size: clamp(3.0em, 1em + 5vw, 7em);
         text-transform: uppercase;
+    }
+    &__motto,
+    &__btn{
+        font-size: clamp(1.375em, 5vw, 3.125em);
     }
     &__motto{
         width: 50%;
-        font-size: 38px;
+        margin-top: 0;
         line-height: 0.85em;
+
+        // texttol fugg, hogy lesz-e hatter
+        // background: rgba(0, 0, 0, 0.2);
+        // backdrop-filter: blur(8px);
     }
     &__btn{
+        width: max-content;
         padding: 0.25em 0.75em;
         background: transparent;
-        color: aliceblue;
-        border: 1px solid aliceblue;
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
         border-radius: 0.2em;
         backdrop-filter: blur(8px);
-        box-shadow: 0px 20px 50px aliceblue;
+        box-shadow: 0px 20px 50px var(--primary-color);
         font-family: 'Teko', sans-serif;
-        font-size: 32px;
         transition: 300ms;
         &:hover{
             background: rgba(175, 218, 247, 0.5);
-            box-shadow: 2px 2px 2px aliceblue;
+            box-shadow: 2px 2px 2px var(--primary-color);
             rotate: -2deg;
             cursor: pointer;
         }
@@ -65,23 +87,24 @@ body {
 }
 
 .info{
-    border: 1px solid red;
-    // position: sticky;
+    // display: none;
     position: absolute;
     top: 15em;
     right: 0;
     width: 25%;
     height: 20em;
     padding: 1rem;
-    // background: transparent;
     background: linear-gradient(62deg, rgba(142, 197, 252, 0.5) 0%, rgba(224, 195, 252, 0.5) 100%);
-    color: aliceblue;
-    border: 1px solid aliceblue;
+    border: 1px solid var(--primary-color);
     border-radius: 0.5em;
     backdrop-filter: blur(8px);
-    // box-shadow: 0px 20px 50px aliceblue;
-    isolation: isolate;
+    font-size: small;
+    overflow: hidden scroll;
     &__title{
         text-transform: uppercase;
     }
+}
+
+.hidden-icon{
+    display: none;
 }
