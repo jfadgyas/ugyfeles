@@ -47,6 +47,17 @@
         &::placeholder{
             text-transform: capitalize;
         }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active{
+            background: transparent;
+            border: none;
+            // -webkit-text-fill-color: var(--primary-color);
+            animation: autofill 1s both;
+            // box-shadow: 0 0 0px 1000px #000 inset;
+            // transition: background-color 5000s ease-in-out 0s;
+        }
         &:not(:placeholder-shown){
             &:valid{
                 & ~ .contact__icon--valid{
@@ -97,6 +108,12 @@
         &--invalid{
             fill: var(--icon-red);
         }
+    }
+}
+
+@keyframes autofill{
+    0%, 100%{
+        background: transparent;
     }
 }
 

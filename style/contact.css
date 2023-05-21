@@ -51,6 +51,11 @@
 .contact__input::placeholder {
   text-transform: capitalize;
 }
+.contact__input:-webkit-autofill, .contact__input:-webkit-autofill:hover, .contact__input:-webkit-autofill:focus, .contact__input:-webkit-autofill:active {
+  background: transparent;
+  border: none;
+  animation: autofill 1s both;
+}
 .contact__input:not(:-moz-placeholder-shown):valid ~ .contact__icon--valid {
   display: block;
 }
@@ -99,6 +104,11 @@
   fill: var(--icon-red);
 }
 
+@keyframes autofill {
+  0%, 100% {
+    background: transparent;
+  }
+}
 @media only screen and (414px > width > 375px) {
   .contact {
     width: calc(100% - 2em);
