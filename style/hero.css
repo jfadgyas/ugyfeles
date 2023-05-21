@@ -1,12 +1,14 @@
 .hero {
+  min-height: 70vh;
   padding: 1em;
-  -moz-columns: 30em;
-       columns: 30em;
+  -moz-columns: 2 24em;
+       columns: 2 24em;
   color: var(--secondary-color);
   font-family: "Teko", sans-serif;
   text-align: center;
   background-image: url("./img/expert_bg.webp");
   background-repeat: repeat-y;
+  background-size: cover;
   background-size: clamp(284%, -20vw, 100%) 55%;
   background-position-x: 75%;
 }
@@ -23,7 +25,7 @@
 .person {
   max-width: 40em;
   margin: 0 auto;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   padding: 1em;
   border: 1px solid var(--primary-color);
   border-radius: 0.45em;
@@ -98,10 +100,20 @@
   opacity: 0.7;
 }
 
-@media only screen and (width >= 1400px) {
+@media only screen and (width > 414px) {
+  .person {
+    display: block;
+    -moz-columns: 2;
+         columns: 2;
+  }
+}
+@media only screen and (width > 500px) {
   .hero {
-    background-size: 50% 100%;
-    background-repeat: repeat-x;
-    background-position-x: -40%;
+    background-size: cover;
+  }
+}
+@media only screen and (width > 832px) {
+  .person {
+    margin-bottom: 12em;
   }
 }/*# sourceMappingURL=hero.css.map */
