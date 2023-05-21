@@ -1,6 +1,7 @@
 .hero{
     padding: 1em;
-    columns: 1;
+    // columns: 1;
+    columns: 30em;
     color: var(--secondary-color);
     font-family: 'Teko', sans-serif;
     text-align: center;
@@ -98,22 +99,22 @@
     }
 }
 
-@media only screen and (width > 414px){
-    .person{
-        display: block;
-        columns: 2;
-    }
-}
+// @media only screen and (width > 414px){
+//     .person{
+//         display: block;
+//         columns: 2;
+//     }
+// }
 
-@media only screen and (width > 767px){
-    .hero{
-        background-size: cover;
-        columns: 2;
-    }
-    .person{
-        margin-bottom: 7em;
-    }
-}
+// @media only screen and (width > 767px){
+//     .hero{
+//         background-size: cover;
+//         columns: 2;
+//     }
+//     .person{
+//         margin-bottom: 7em;
+//     }
+// }
 
 @media only screen and (width >= 1400px){
     .hero{

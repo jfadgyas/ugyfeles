@@ -54,6 +54,8 @@
 .contact__input:-webkit-autofill, .contact__input:-webkit-autofill:hover, .contact__input:-webkit-autofill:focus, .contact__input:-webkit-autofill:active {
   background: transparent;
   border: none;
+  -webkit-text-fill-color: var(--primary-color);
+  color: var(--primary-color);
   animation: autofill 1s both;
 }
 .contact__input:not(:-moz-placeholder-shown):valid ~ .contact__icon--valid {
